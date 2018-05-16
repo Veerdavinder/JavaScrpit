@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <head>
-	<title></title>
+	<title>Simple Slideshow</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-	<style>
-	.container
-	{
-			margin:0 auto;
-			padding:0;
-			height:70%;
-			width:70%;
-	}
-	</style>
-	<script>
-	var a=0;
-	var images=[];
-	
-	images[0]='image_1.jpg';
-	images[1]='image_2.jpg';
-	images[2]='image_3.jpg';
-	images[3]='image_4.jpg';
-	
-	function changeImg()
-	{
-		document.slide.src=images[a];
-		
-		if(a<images.length-1)
-		{
-			a++;
-		}
-		else
-		{
-			a=0;
-		}
-		
-		setTimeout("changeImg()",4000);
-	}
-	window.onload=changeImg;
-	
-	
-	</script>
+	<script type="text/javascript" src="slide.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 <body>
 	<div class="container">
 		<img name="slide" class="main" height="100%" width="100%">
